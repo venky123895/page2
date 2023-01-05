@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire | Redeem</title>
+    <link rel="stylesheet" href="redeemsite.css">
+    <link rel="shortcut icon" href="https://freefiremobile-a.akamaihd.net/ffwebsite/images/freefire16-2.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <div class="logo">
+            <img src="https://logos-download.com/wp-content/uploads/2021/01/Free_Fire_Logo.png" id="logo">
+
+        </div>
+        <div class="heading">
+            <p class="mainHeading">Rewards Redemption Site</p>
+            <p class="subHeading">Redeem your code</p>
+            <div id="inputBox">
+                <input type="text" id="sampleInput" required>
+                <button id="submit">Submit</button>
+                <p id="displayContainer"></p>
+            </div>
+
+        </div>
+       
+        <div id="textContainer">
+            <div class="outerbox">
+                <p class="titletag">Important Notice:</p>
+                <p class="instructions">1. Redemption code has<span> 12/16 </span>characters, consisting of capital letters and numbers.</p>
+                <p class="instructions">2. Item rewards are shown in <span>[vault]</span> tab in game lobby; Golds or diamonds will add in account wallet automatically.</p>
+                <p class="instructions">3. Please note redemption expiration date. Any expired codes cannot be redeemed.</p>
+                <p class="instructions">4. Please contact customer service if you encountered any issue.</p>
+                <p class="instructions">5. Reminder: you will not be able to redeem your rewards with guest accounts. You may bind your account to Facebook or VK in order to receive the rewards.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const input=document.getElementById('sampleInput');
+    const clickButton=document.getElementById('submit');
+    const message=document.getElementById('displayContainer');
+
+    init()
+
+    function init(){
+        input.addEventListener('change',formValidation)
+    }
+
+    function formValidation(){
+        const inputValue=input.value;
+        if(inputValue.length !== 12){
+            alert('Invalid Redeem Code');
+            return;
+        }
+        else{
+            clickButton.addEventListener('click',function(){
+                message.innerText='Congratulations';
+            })
+        }
+        
+    }
+</script>
+</html>
